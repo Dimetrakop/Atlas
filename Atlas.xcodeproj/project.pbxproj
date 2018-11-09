@@ -13,7 +13,6 @@
 		C73225652191DF5500C206EB /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73225642191DF5500C206EB /* UIColor+AppColors.swift */; };
 		C73225672191E07900C206EB /* ApplicationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73225662191E07900C206EB /* ApplicationRouter.swift */; };
 		C73225692191E08800C206EB /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73225682191E08800C206EB /* ApplicationAssembly.swift */; };
-		C732256B2191E59D00C206EB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C732256A2191E59D00C206EB /* MainTabBarController.swift */; };
 		C732256D2191E7EF00C206EB /* SearchVCInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C732256C2191E7EF00C206EB /* SearchVCInteractor.swift */; };
 		C73225712192CD7600C206EB /* DetailsVCInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73225702192CD7600C206EB /* DetailsVCInteractor.swift */; };
 		C732257A2192E34D00C206EB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73225792192E34D00C206EB /* UIView+Extension.swift */; };
@@ -45,7 +44,6 @@
 		C73225642191DF5500C206EB /* UIColor+AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
 		C73225662191E07900C206EB /* ApplicationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRouter.swift; sourceTree = "<group>"; };
 		C73225682191E08800C206EB /* ApplicationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationAssembly.swift; sourceTree = "<group>"; };
-		C732256A2191E59D00C206EB /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		C732256C2191E7EF00C206EB /* SearchVCInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVCInteractor.swift; sourceTree = "<group>"; };
 		C73225702192CD7600C206EB /* DetailsVCInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVCInteractor.swift; sourceTree = "<group>"; };
 		C73225792192E34D00C206EB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 		C732257B2192F1B600C206EB /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				C73225AB219483BA00C206EB /* Image */,
 				C73225AA219483AA00C206EB /* Network */,
 			);
 			path = Services;
@@ -145,13 +142,6 @@
 				C732257C2192F1D100C206EB /* Network.swift */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		C73225AB219483BA00C206EB /* Image */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Image;
 			sourceTree = "<group>";
 		};
 		C7BDD0AF21919C780034AE84 = {
@@ -190,7 +180,6 @@
 				C7BDD0D02191B0580034AE84 /* Details */,
 				C7BDD0CE2191AFFC0034AE84 /* Regions */,
 				C7BDD0DA2191B5930034AE84 /* SearchViewController */,
-				C732256A2191E59D00C206EB /* MainTabBarController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -354,7 +343,6 @@
 				C7BDD0D72191B5350034AE84 /* DetailsViewController.swift in Sources */,
 				C732257A2192E34D00C206EB /* UIView+Extension.swift in Sources */,
 				C73225972193242300C206EB /* CountryCell.swift in Sources */,
-				C732256B2191E59D00C206EB /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

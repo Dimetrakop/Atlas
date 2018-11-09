@@ -15,7 +15,7 @@ protocol ApplicationAssemblyType: class {
     var applicationRouter: ApplicationRouterType? { get set }
     var appConfig: ApplicationConfigType { get }
     func networkManager() -> NetworkServiceType
-    func mainTabBarController() -> MainTabBarController
+    func mainTabBarController() -> UITabBarController
     func detailsViewController(country: CountryModelType) -> DetailsViewController
     func regionsViewController() -> RegionsViewController
 }
@@ -41,8 +41,8 @@ final class ApplicationAssembly: ApplicationAssemblyType {
         return networkService
     }
 
-    func mainTabBarController() -> MainTabBarController {
-        let mainTabBarController: MainTabBarController = mainStoryboard.createViewController() as MainTabBarController
+    func mainTabBarController() -> UITabBarController {
+        let mainTabBarController: UITabBarController = mainStoryboard.createViewController() as UITabBarController
 
         if  let navigationController = mainTabBarController.children[0] as? UINavigationController,
             let regionsVC = navigationController.children[0] as? RegionsViewController {

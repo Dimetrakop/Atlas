@@ -34,7 +34,7 @@ final class ApplicationRouter: ApplicationRouterType {
     }
 
     func routeDown(filterItem: ListModelType) {
-        if let navigationController = window?.rootViewController as? MainTabBarController,
+        if let navigationController = window?.rootViewController as? UITabBarController,
            let navigationVC = navigationController.selectedViewController as? UINavigationController {
             let regionsVC: RegionsViewController = appAssembly.regionsViewController() as RegionsViewController
             regionsVC.interactor?.filterItem = filterItem
@@ -43,7 +43,7 @@ final class ApplicationRouter: ApplicationRouterType {
     }
 
     func routeToDetail(country: CountryModelType) {
-        if let navigationController = window?.rootViewController as? MainTabBarController,
+        if let navigationController = window?.rootViewController as? UITabBarController,
             let navigationVC = navigationController.selectedViewController as? UINavigationController {
             let detailVC: DetailsViewController = appAssembly.detailsViewController(country: country) as DetailsViewController
             navigationVC.pushViewController(detailVC, animated: true)

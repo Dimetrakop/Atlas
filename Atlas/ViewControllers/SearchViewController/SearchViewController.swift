@@ -31,26 +31,26 @@ final class SearchViewController: UIViewController {
     public var imageCache: ImageSvgCache?
     public var isFirstDataSet = true
     private var doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIConstant.toolBarWidth, height: UIConstant.toolBarHeight))
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         refreshTable()
         setupView()
     }
-    
+
     func setupView() {
         let done: UIBarButtonItem = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.done, target: self, action: #selector(cancelBtnClick))
         doneToolbar.items = [done]
         searchBar.inputAccessoryView = doneToolbar
         searchBar.inputAccessoryView = doneToolbar
     }
-    
+
     func refreshTable() {
         table.reloadData()
         activityIndicator.stopAnimating()
         noResultsLabel.isHidden = itemsList.count > 0 || isFirstDataSet == true
     }
-    
+
     @objc
     private func cancelBtnClick() {
         searchBar.resignFirstResponder()
@@ -61,7 +61,7 @@ extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemsList.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellName = "searchCell"
         let cell = table.dequeueReusableCell(withIdentifier: cellName) as! CountryCell
@@ -74,13 +74,15 @@ extension SearchViewController: UITableViewDataSource {
         }
         return cell
     }
-    
-    
 }
 
 extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
     }
 }
 
@@ -92,9 +94,7 @@ extension SearchViewController: UISearchBarDelegate {
             interactor?.searchCountry(name:  searchText)
         }
     }
-    
-    
-    
+
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         print("XXX")
     }

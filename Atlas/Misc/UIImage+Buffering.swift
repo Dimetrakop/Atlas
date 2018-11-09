@@ -29,8 +29,7 @@ extension UIImageView {
             }).resume()
         }
     }
-    
-    
+
     func loadSVGImageFrom(urlString: String, imageCache: ImageSvgCache?) {
         
         loadImageData(urlString: urlString, imageCache: imageCache) { [weak self] (data) in
