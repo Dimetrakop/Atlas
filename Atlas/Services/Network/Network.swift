@@ -33,8 +33,10 @@ final class NetworkService: NetworkServiceType {
                     return
                 }
                 do {
-                    let decodedData = try JSONDecoder().decode(T.self, from: response.data!)
-                    completion(decodedData)
+                    if let data = response.data {
+                        let decodedData = try JSONDecoder().decode(T.self, from: data)
+                        completion(decodedData)
+                    }
                 } catch {
                     print(error)
                     completion(nil)
